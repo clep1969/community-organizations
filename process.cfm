@@ -9,7 +9,7 @@
 </head>
 
 <body>
-    <cffile action="read" file="D:\philtest2\community-development\community-profiles\philadelphia_pa-counties\community-organizations.xml" variable="objGet" />
+    <cffile action="read" file="D:\path\to\REDACTED.xml" variable="objGet" />
     <cfset communityOrgs_xml=XMLParse(objGet)>
     <cfset numOfOrgs = ArrayLen(communityOrgs_xml.document.XmlChildren)>
     <cfoutput>
