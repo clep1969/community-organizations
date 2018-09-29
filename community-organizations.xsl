@@ -5,7 +5,7 @@
     	<html>
         
         	<head>
-            	<link rel="stylesheet" href="http://www.philadelphiafed.org/_css/global.css" />
+            	<link rel="stylesheet" href="path/to/_css/global.css" />
             </head>
             
             <body>
