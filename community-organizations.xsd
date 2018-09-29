@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <xs:import namespace="http://www.w3.org/2001/XMLSchema-instance" schemaLocation="xsi.xsd" />
+  <xs:element name="document">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="communityOrg"/>
+      </xs:sequence>
+      <xs:attribute ref="xsi:noNamespaceSchemaLocation" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="communityOrg">
+    <xs:complexType>
+      <xs:sequence>
+	  	<xs:element ref="guid"/>
+        <xs:element ref="orgName"/>
+        <xs:element ref="mission"/>
+        <xs:element ref="yearFounded"/>
+        <xs:element ref="corePrograms"/>
+        <xs:element ref="serviceArea"/>
+        <xs:element ref="contactInfo"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="guid" type="xs:integer"/>
+  <xs:element name="orgName" type="xs:string"/>
+  <xs:element name="mission" type="xs:string"/>
+  <xs:element name="yearFounded" type="xs:integer"/>
+  <xs:element name="corePrograms">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="1" maxOccurs="unbounded" ref="coreProgram"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="coreProgram" type="xs:string"/>
+  <xs:element name="serviceArea" type="xs:NCName"/>
+  <xs:element name="contactInfo">
+  	<xs:complexType>
+	  <xs:sequence>
+	  	<xs:element ref="address1"/>
+		<xs:element ref="address2"/>
+		<xs:element ref="cityState"/>
+		<xs:element ref="phone"/>
+		<xs:element ref="fax"/>
+		<xs:element ref="email"/>
+		<xs:element ref="website"/>
+      </xs:sequence>
+	</xs:complexType>
+  </xs:element>
+  <xs:element name="address1" type="xs:string"/>
+  <xs:element name="address2" type="xs:string"/>
+  <xs:element name="cityState" type="xs:string"/>
+  <xs:element name="phone" type="xs:string"/>
+  <xs:element name="fax" type="xs:string"/>
+  <xs:element name="email" type="xs:string"/>
+  <xs:element name="website" type="xs:string"/>
+</xs:schema>
